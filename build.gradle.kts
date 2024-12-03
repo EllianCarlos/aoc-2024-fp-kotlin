@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm") version "1.9.10"
+    kotlin("jvm") version "2.1.0"
     application
 }
 
@@ -17,12 +17,12 @@ dependencies {
 
 application {
     // Set the main class to your entry point
-    mainClass.set("com.example.aoc.MainKt")
+    mainClass.set("com.elliancarlos.aoc.MainKt")
 }
 
 // Optional: Configure Java toolchain if needed
 kotlin {
-    jvmToolchain(17)
+    jvmToolchain(21)
 }
 
 // Optional: Task for running a specific day
@@ -32,6 +32,5 @@ tasks.register("runDay") {
     val day = project.findProperty("day")?.toString() ?: "1"
     doLast {
         println("Running solution for day: $day")
-        // Insert logic to execute a specific day's solution dynamically if needed
     }
 }

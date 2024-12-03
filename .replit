@@ -1,3 +1,0 @@
-modules = ["bash", "java-graalvm22.3"]
-[nix]
-channel = "stable-24_05"

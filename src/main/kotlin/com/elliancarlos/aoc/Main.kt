@@ -1,8 +1,11 @@
 package com.elliancarlos.aoc
 
+import com.elliancarlos.aoc.problems.solveDay1
+import com.elliancarlos.aoc.problems.solveDay2
 import com.github.ajalt.clikt.core.CliktCommand
 import com.github.ajalt.clikt.parameters.options.option
 import com.github.ajalt.clikt.parameters.types.int
+import java.io.File
 
 fun main(args: Array<String>) = AdventOfCode().main(args)
 
@@ -36,7 +39,6 @@ class AdventOfCode : CliktCommand() {
 
     private fun getInput(day: Int): List<String> {
         val filename = "inputs/day${day.toString().padStart(2, '0')}.txt"
-        return this::class.java.classLoader.getResource(filename)?.readText()?.lines()
-            ?: error("Input file for Day $day not found.")
+        return File(filename).readLines()
     }
 }
