@@ -1,7 +1,7 @@
 package com.elliancarlos.aoc
 
-import com.elliancarlos.aoc.problems.solveDay1
-import com.elliancarlos.aoc.problems.solveDay2
+import com.elliancarlos.aoc.problems.one.solveDay1
+import com.elliancarlos.aoc.problems.two.solveDay2
 import com.github.ajalt.clikt.core.CliktCommand
 import com.github.ajalt.clikt.parameters.options.option
 import com.github.ajalt.clikt.parameters.types.int
